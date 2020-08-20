@@ -3,6 +3,7 @@
 >安装docsify 前提：本地需安装node 
 * 终端输入：npm i docsify-cli -g 全局安装
 
+>MarKdown使用介绍(http://www.mdeditor.com/)
 
 > 文档链接(https://docsify.js.org/#/zh-cn/configuration)
 
