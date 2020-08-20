@@ -1,4 +1,5 @@
 # 首页
 
-> 这是一段文字
-* 前端框架：vue-cli、vue-router、axios、vuex
+> 记录日常学习内容
+* 前端技术：
+* 框架：vue-cli、vue-router、axios、vuex
