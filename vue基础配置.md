@@ -11,3 +11,5 @@
 
 * 2.找到配置项‘serve’，添加 "serve": "vue-cli-service serve --open",
 * 3.重新启动就可以 自动打开浏览器了
+
+## vue 移动端配置rem 响应式布局
