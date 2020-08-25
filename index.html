@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="description" content="Description">
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="shortcut icon" type="image/x-icon" href="./img/favicon.ico">
   <link rel="stylesheet" href="//unpkg.com/docsify/themes/vue.css">
   <!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/vue.css"> -->
 </head>
@@ -22,15 +23,22 @@
       repo: '',
       coverpage: true,//设置封面
       // onlyCover:true,//配置封面之后，封面和首页是同时出现的，设置之后，可以只显示封面
-      loadSidebar: true,//配置了loadSidebar后就不会生成默认的侧边栏了
-      // subMaxlevel:3,//设置当前页面目录的标题
+      loadSidebar: true,//配置了loadSidebar后就不会生成默认的侧边栏了, 加载左侧导航栏 使用同一级目录下的_sidebar.md指定目录结构
+      subMaxlevel:3,//每一个md文章中显示的标题级别
       // alias:{
       //   '/.*/_sidebar.md':'/_sidebar.md'
       // },
       loadNavbar: true,//自定义导航栏
+      search: {//添加搜索功能
+            maxAge: 86400000, // 过期时间，单位毫秒，默认一天
+            noData: '找不到结果',//搜索不到结果时显示
+            paths: 'auto',//自动
+            placeholder: '搜索',//搜索框提示
+      },
     }
   </script>
   
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
+  <script src="//unpkg.com/docsify/lib/plugins/search.js"></script>
 </body>
 </html>
