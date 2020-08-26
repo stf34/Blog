@@ -1,4 +1,5 @@
 ## vue自动打开浏览器配置
+> vue移动端项目架构设计 学习文档：https://www.jianshu.com/p/d4598baf31c2
 ### vue 配置
 
 > 找到config/index.js中
