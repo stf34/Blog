@@ -228,3 +228,110 @@
 3. 然后启动项目就行`npm run serve`
 
 > UI框架，（这里我使用vant） 移动端：vant PC端：element UI 
+### 如果使用响应式布局
+
+> PC端  rem + 媒体查询
+1. css 样式
+    ``` css
+        @charset "utf-8";
+        /* 媒体查询，响应式布局 */
+        @media (min-width:1024px){
+            body{font-size:18px;}
+        }
+        @media (min-width:1100px){
+            body{font-size:20px;}
+        }
+        @media (min-width:1280px){
+            body{font-size:22px;}
+        }
+        @media (min-width:1366px){
+            body{font-size:24px;}
+        }
+        @media (min-width:1440px){
+            body{font-size:25px;}
+        }
+        @media (min-width:1680px){
+            body{font-size:28px;}
+        }
+        @media (min-width:1920px){
+            body{font-size:33px;}
+        }
+
+        html, body, div, span, applet, object, iframe,
+        h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+        a, abbr, acronym, address, big, cite, code,
+        del, dfn, em, font, img, ins, kbd, q, s, samp,
+        small, strike, strong, sub, sup, tt, var,
+        b, u, i, center,
+        dl, dt, dd, ol, ul, li,
+        fieldset, form, label, legend,
+        table, caption, tbody, tfoot, thead, tr, th, td {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            outline: 0;
+            font-size: 100%;
+            /*background: transparent;*/
+        }
+        table {
+            border-collapse:collapse;
+            border-spacing:0;
+        }
+        fieldset, img {    border:0;}
+        address, caption, cite, code, dfn, em, strong, th, var {
+            font-style:normal;
+            font-weight:normal;
+        }
+        ol, ul { list-style:none; }
+        caption, th { text-align:left; }
+        h1, h2, h3, h4, h5, h6 {
+            font-size:200%;
+            font-weight:normal;
+        }
+        :focus { outline: 0;}
+        a{ text-decoration:none;}
+        a:hover img{ border:none;}
+
+        a:active{}
+        /*清除浮动*/
+        .clearfix:after {
+            content: ".";
+            display: block;
+            height: 0;
+            clear: both;
+            visibility: hidden;
+        }
+        .clearfix {display: inline-block;}
+        /* Hides from IE-mac \*/
+        * html .clearfix { height: 1%;}
+        .clearfix {display: block;}
+        /* End hide from IE-mac */
+
+    ```
+2. js 逻辑
+    ```js
+        var resizeType = true
+        
+        /* 初始加载按照当前窗口自动渲染当前页内容 */
+        Resize()
+        /* 跟随窗口的改变而改变 */
+        window.onresize = function () {
+        if (resizeType) {
+            Resize()
+        }
+        }
+        function Resize(){
+        var whdef = 100/1920;// 表示1920的设计图,使用100PX的默认值,其他页面其他尺寸、、手机表示750的设计图,使用50PX的默认值
+        var wH = window.innerHeight;// 当前窗口的高度
+        var wW = window.innerWidth;// 当前窗口的宽度
+        if (wW < 1024) {
+            resizeType = false
+            document.documentElement.style.fontSize = 1+'px'
+        } else {
+            resizeType = true
+        }
+        var rem = wW * whdef;// 以默认比例值乘以当前窗口宽度,得到该宽度下的相应FONT-SIZE值
+        document.documentElement.style.fontSize = rem+'px'
+        }
+    ```
+> [移动端响应式布局](./vue基础配置.md)
