@@ -7,6 +7,7 @@
     * router 路由拆分模块化：https://www.jianshu.com/p/2833243987dd
     * vue中Axios的封装与API接口的管理：https://juejin.im/post/6844904038085967880
     * vue-cli4环境变量与分环境打包方法：https://juejin.im/post/6844904038459244558
+    * 环境变量设置：https://blog.csdn.net/weixin_43891448/article/details/107370738 https://www.jianshu.com/p/e40709390301
     * vuex拆分模块化：https://www.jianshu.com/p/d40561bce5d0
 -------
 ### 1.1 项目初始化 

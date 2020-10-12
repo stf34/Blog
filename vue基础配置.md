@@ -183,3 +183,13 @@
         }
     </script>
 ```
+
+### vue使用 MD5加密
+ > 命令：`npm install --save js-md5`
+1. 在`，main.js`引入
+    ```
+        //MD5加密
+        import md5 from 'js-md5'
+
+        Vue.prototype.$md5 = md5
+    ```
