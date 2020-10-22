@@ -9,6 +9,9 @@
     * vue-cli4环境变量与分环境打包方法：https://juejin.im/post/6844904038459244558
     * 环境变量设置：https://blog.csdn.net/weixin_43891448/article/details/107370738 https://www.jianshu.com/p/e40709390301
     * vuex拆分模块化：https://www.jianshu.com/p/d40561bce5d0
+    * 使用vue-cookies操作cookie：https://www.jianshu.com/p/60c13168cc8f
+    * vue指令实现 防止按钮短时间内多次点击：https://blog.csdn.net/zo429515/article/details/106660402/
+    * 借鉴： https://www.jianshu.com/p/3e0ec1588160
 -------
 ### 1.1 项目初始化 
 > 技术选型：
