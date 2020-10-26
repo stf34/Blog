@@ -1,11 +1,6 @@
 * [docsify学习](docsify)
 * [promise学习笔记](promise学习笔记)
-* [监听页面滚动数据](监听页面滚动数据)
-* [VUE学习知识总结](VUE学习知识总结)
 * [vue基础配置](vue基础配置)
-* [vant-ui的学习](vant-ui的学习)
 * [js的日常记录](js的日常记录)
 * [css的日常记录](css的日常记录)
-* [vue与Android和ios互相传值](vue与Android和ios互相传值)
-* [vue项目架构设计](vue项目架构设计)
-* [基于express和mock.js搭建自己的前后端分离Mock服务器](基于express和mock.js搭建自己的前后端分离Mock服务器)
+
