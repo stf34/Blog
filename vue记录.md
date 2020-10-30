@@ -8,5 +8,7 @@
     * [vue项目播放视频流使用vue-video-player](./vue/vue项目播放视频流使用vue-video-player.md)
     * [vue项目架构设计](./vue/vue项目架构设计.md)
     * [vue定时器问题](./vue/vue定时器问题.md)
+    * [vue实现拖拽排序](./vue/vue实现拖拽排序.md)
+    * [vue项目播放视频流使用vue-video-player](./vue/vue项目播放视频流使用vue-video-player.md)
     <!-- * [移动端响应式布局](./vue/vant-ui的学习.md)
     <img src="./vue/vue项目架构设计.md"> -->

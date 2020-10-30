@@ -34,8 +34,10 @@
     * js 逻辑
     ```js
         export default {
+            props: ["videoSrc"],
             data() {
                 return {
+                videoUrl: this.videoSrc,
                 // 视频播放
                 playerOptions: {
                     playbackRates: [0.7, 1.0, 1.5, 2.0], //播放速度
@@ -49,8 +51,9 @@
                     sources: [
                     {
                         type: "", // 类型
-                        src: "http://vjs.zencdn.net/v/oceans.mp4" //url地址
-                        // src: "" //url地址
+                        //src: "http://vjs.zencdn.net/v/oceans.mp4" //url地址
+                        src: "" //动态修改url地址时，可以为空
+                        //src: require('./video.mp4') //引入本地视频，因为引入的是本地资源，要把资源写在“require”方法里
                     }
                     ],
                     poster: "", //你的封面地址
@@ -65,7 +68,18 @@
                 }
                 };
             },
-            mounted() {},
+            watch: {
+                /* 监听传的值 */
+                videoSrc(newval, oldval) {
+                /* 将变化的新值，赋予到要渲染的值 */
+                this.videoUrl = newval;
+
+                }
+            },
+            mounted() {
+                this.playerOptions['sources'][0]['src'] = this.videoUrl;//动态修改播放地址网址
+                this.playerOptions['sources'][0]['src'] = require(`${this.video}`)//动态修改播放本地视频
+            },
             computed: {
                 player() {
                 return this.$refs.videoPlayer.player;
@@ -114,3 +128,20 @@
             display: block;
         }
     ```
+
+### 在组件中使用
+
+``` js
+    import videSP from "./components/video";//引入视频组件
+    export default {
+        components: {
+            videSP
+        },
+
+        data() {
+            return {
+                videoSrc:'http://vjs.zencdn.net/v/oceans.mp4'//动态传播的视频地址
+            };
+        },
+    }
+```
