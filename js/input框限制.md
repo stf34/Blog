@@ -1,6 +1,14 @@
 ### 限制输入框只能输入正整数
 ```html
-    function positiveInteger(obj) {
+    <input maxlength="3" style="width:70px;height:32px;" type="text" id="btStime" placeholder="限制输入框只能输入正整数" oninput="positive(this)">
+
+
+```
+
+> js逻辑
+
+```js
+    function positive(obj) {
         if(obj.value.length == 1) {
             obj.value = obj.value.replace(/[^1-9]/g, '')
         } else {
@@ -11,6 +19,12 @@
 ```
 ### 输入整数并保留两位小数
 ```html
+    <input maxlength="3" style="width:70px;height:32px;" type="text" id="btStime" placeholder="输入整数并保留两位小数" oninput="inpnumers(this)">
+
+```
+> js逻辑
+
+```js
     /* 价格限制 */
     function inpnumers(obj) {
       //禁止录入整数部分两位以上，但首位为0
@@ -28,15 +42,20 @@
       return obj.value;
     }
 ```
-
 ### input只能输入正整数，且第一个不能为0，不能输入小数点
 
 ```html
-/* 限制输入框只能输入正整数 */
-function posit(obj) {
-    //禁止录入整数部分两位以上，但首位为0
-    obj.value = obj.value.replace(/^([1-9]\d*(\.[\d]{0,2})?|0(\.[\d]{0,2})?)[\d.]*/g, "$1");
-    //输入0-9的整数，其他的除外
-    obj.value = obj.value.replace(/[^0-9]/g, '')
-}
+    <input maxlength="3" style="width:70px;height:32px;" type="text" id="btStime" placeholder="只能输入正整数，且第一个不能为0，不能输入小数点" oninput="posit(this)">
+```
+
+> js逻辑
+
+```js
+    /* 限制输入框只能输入正整数 */
+    function posit(obj) {
+        //禁止录入整数部分两位以上，但首位为0
+        obj.value = obj.value.replace(/^([1-9]\d*(\.[\d]{0,2})?|0(\.[\d]{0,2})?)[\d.]*/g, "$1");
+        //输入0-9的整数，其他的除外
+        obj.value = obj.value.replace(/[^0-9]/g, '')
+    }
 ```
