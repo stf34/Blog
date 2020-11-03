@@ -4,6 +4,8 @@
 
 ### 拖拽排序
 
+> 别的不多说了，直接上例子
+
 ```html
     <!doctype html>
     <html>
@@ -258,7 +260,7 @@
                 //拖动结束
                 onEnd: function (evt) {
 
-                    //获取当前组件在dom中的索引值；
+       
                     var documentType = [];
                     var domArr = [];
 
@@ -298,7 +300,7 @@
                 //拖动结束
                 onEnd: function (evt) {
 
-                    //获取当前组件在dom中的索引值；
+
                     var documentType = [];
                     var domArr = [];
   
