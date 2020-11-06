@@ -59,3 +59,26 @@
         obj.value = obj.value.replace(/[^0-9]/g, '')
     }
 ```
+
+### input验证在文本框输入的只能是数字和字母
+
+```html
+    <input
+        id="amount"
+        maxlength="12"
+        type="text"
+        placeholder="请输入12位激活密码"
+        style="width:70px;height:32px;"
+        oninput="amountInit(this)"
+    />
+```
+
+> js逻辑
+
+```js
+    /* 限制输入框只能是数字和字母 */
+    function amountInit(obj) {
+        //输入数字和字母，其他的除外
+        obj.value = obj.value.replace(/[\W]/g, "")
+    }
+```
