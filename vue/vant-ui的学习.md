@@ -11,7 +11,7 @@
 * 1.前提是：你如果想要自动配置的话，你可以使用官方提供的一个自动按需引入的插件：babel-plugin-import 是一款 babel 插件，它会在编译过程中将 import 的写法自动转换为按需引入的方式
 > npm安装： npm i babel-plugin-import -D  可以在 babel.config.js 中配置 
 
-``` vue
+``` js
     module.exports = {
         plugins: [
             ['import', {
@@ -23,7 +23,7 @@
     };
 ``` 
 > asssts文件夹内的 vant.js 写法
-``` vue
+``` js
     import Vue from 'vue'
     import { 
         Button,
@@ -36,7 +36,7 @@
     .use(CollapseItem)//Collapse 折叠面板
 ```
 > 在main.js 内引入 
-``` vue
+``` js
     import './assets/js/vant'//引入vant UI 相关组件配置
 ```
 
