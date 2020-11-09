@@ -17,9 +17,9 @@
 > 接收父组件传递过来的值，最好监听传递过来值的变化，然后在渲染
 
 ```js
-    props: ["collLists"],
     export default {
         components: {},
+        props: ["collLists"],
         data() {
             return {
                 liColHeight: 0, // 折叠面板内容初始高度
@@ -48,8 +48,8 @@
         watch: {
             /* 监听传的值 */
             collLists(newval, oldval) {
-            /* 将变化的新值，赋予到要渲染的值 */
-            this.collList = newval;
+                /* 将变化的新值，赋予到要渲染的值 */
+                this.collList = newval;
             }
         },
     };
