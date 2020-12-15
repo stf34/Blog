@@ -34,3 +34,61 @@
   
 > 实现最小值和最大值是随时可控的
 [封装组件silder.js路径]()
+
+### 使用方法
+```html
+    <div class="a"></div>
+```
+
+> 前提：引入`<link rel="stylesheet" href="./css/silder.css">`样式
+```css
+    <style>
+        .a {
+            width: 500px;
+            height: 20px;
+            margin-top: 100px;
+            margin-left: 100px;
+        }
+        /* 线宽 */
+        .zui-slider-bar{
+            height: 10px;
+        }
+        /* 圈的大小 */
+        .zui-slider-wrap{
+            top: -12px;
+        }
+        .zui-slider-wrap-btn{
+            width: 16px;
+            height: 16px;
+        }
+        html,
+        body {
+            height: 100%;
+            overflow: hidden;
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+        }
+    </style>
+```
+> 前提：引入`<script src="./js/silder.js"></script>`代码逻辑
+```js
+    ZUI.silder({
+        elem: '.a',
+        color: ' #2fa0ec',//步骤条颜色
+        pos: '35%',//初始滑动百分比
+        samall:16,//最小值
+        showNum: true,//是否显示当前字段
+        count: 100,//最大值
+        disable: false,//是否禁用
+        callBackMove: function (num) {//鼠标滑动时事件
+            console.log('move', num);
+            
+        },
+        callBackMouseup: function (num) {//鼠标停止事件
+            console.log('up', num);
+        }
+    }) 
+```
