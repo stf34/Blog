@@ -60,3 +60,25 @@
         }
     })
 ```
+
+
+## 遭遇的问题
+
+1. 移动端网页 video播放层级过高遮挡自定义元素
+> 解决方法：(在video上添加属性)
+    ios :`webkit-playsinline="true"`
+    android:`x5-video-player-type="h5" x5-video-player-fullscreen="true" x5-video-orientation="portraint"`
+
+2. video标签限制宽和高
+```css
+    video{
+        object-fit:fill;
+    }
+```
+
+
+fill: 默认值。替换内容拉伸填满整个content box, 不保证保持原有的比例。
+contain: 保持原有尺寸比例。保证替换内容尺寸一定可以在容器里面放得下。因此，此参数可能会在容器内留下空白。
+cover: 保持原有尺寸比例。保证替换内容尺寸一定大于容器尺寸，宽度和高度至少有一个和容器一致。因此，此参数可能会让替换内容（如图片）部分区域不可见。
+none: 保持原有尺寸比例。同时保持替换内容原始尺寸大小。
+scale-down: 就好像依次设置了none或contain, 最终呈现的是尺寸比较小的那个。
